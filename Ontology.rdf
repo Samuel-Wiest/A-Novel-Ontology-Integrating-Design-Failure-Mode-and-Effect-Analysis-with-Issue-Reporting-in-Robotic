@@ -1,0 +1,3000 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#"
+     xml:base="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:cora="http://purl.org/ieee1872-owl/cora-fullaxiom#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:corax="http://purl.org/ieee1872-owl/corax#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:rparts="http://purl.org/ieee1872-owl/rparts#"
+     xmlns:cora-bare="http://purl.org/ieee1872-owl/cora-bare#"
+     xmlns:sumo-cora="http://purl.org/ieee1872-owl/sumo-cora#"
+     xmlns:annotation="http://purl.org/ieee1872-owl/annotation#"
+     xmlns:FMEA_Ontology_Excel_Imported="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Issue_Reports">
+        <owl:imports rdf:resource="http://purl.org/ieee1872-owl/cora-fullaxiom"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/cora-bare#agentRobot -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#agentRobot">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+        <rdfs:range rdf:resource="http://purl.org/ieee1872-owl/cora-bare#Robot"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/cora-bare#equippedWith -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#equippedWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/cora-bare#robotPart -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#robotPart">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasRobotPart"/>
+        <rdfs:comment xml:lang="en">To be part of a robot.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/corax#about -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/corax#about">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#describedBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">To concern or be on the subject of.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/corax#dependsOn -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/corax#dependsOn">
+        <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Entity"/>
+        <rdfs:comment xml:lang="en">To be controlled or determined by.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/corax#designMeasure -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/corax#designMeasure">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">The abstract counterpart of measure.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/corax#idealizes -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/corax#idealizes">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#idealizedBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">To give an ideal form or value to.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/corax#interactsWith -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/corax#interactsWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/rparts#robotActuatingPart -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/rparts#robotActuatingPart">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasRobotActuatingPart"/>
+        <rdfs:comment>Devices that allow the robot to move and act in the surrounding environment.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/rparts#robotCommunicatingPart -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/rparts#robotCommunicatingPart">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasRobotCommunicatingPart"/>
+        <rdfs:comment>The robotCommunicatingPart is the role played by any device that serves as an instrument in a robot-robot or human-robot communication process by allowing the robot to send (or receive) information to (or from) a robot or a human.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/rparts#robotProcessingPart -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/rparts#robotProcessingPart">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasRobotProcessingPart"/>
+        <rdfs:comment>Processing devices that allow the robot to process information play the role of the robotProcessingPart.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/rparts#robotSensingPart -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/rparts#robotSensingPart">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasRobotSensingPart"/>
+        <rdfs:comment>Measuring devices can play the role of a sensing part of a robot when they are connected to robots.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#agent -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#agent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#causes -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#causes">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#causedBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">To make happen.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#member -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#member">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasMember"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#part -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#part">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasPart"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Object"/>
+        <rdfs:range rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Object"/>
+        <rdfs:comment xml:lang="en">To be part of.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#time -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#time">
+        <rdfs:comment xml:lang="en">This relation holds between an instance of Physical and an instance of TimePosition just in case the temporal lifespan of the former includes the latter. In other words, (time ?THING ?TIME) means that ?THING existed or occurred at ?TIME.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#abstractPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#abstractPart">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasAbstractPart"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/corax#DesignObject"/>
+        <rdfs:range rdf:resource="http://purl.org/ieee1872-owl/corax#DesignObject"/>
+        <rdfs:comment xml:lang="en">The abstract counterpart to Part. A Design Object can have other Design Objects as abstract parts.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#accountedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#accountedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#accountsFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#accountsFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#accountsFor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Human"/>
+        <rdfs:range rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Entity"/>
+        <rdfs:comment xml:lang="en">To be responsible for.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#bears -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#bears">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#bornBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Entity"/>
+        <rdfs:range rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Attribute"/>
+        <rdfs:comment xml:lang="en">An Entity carries an Attribute.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#becomes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#becomes">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#comesFrom"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#FailureEffect"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#FailureCause"/>
+        <rdfs:comment xml:lang="en">To change from one state to another.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#bornBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#bornBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">An Attribute is carried by an Entity.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#causedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#causedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#comesFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#comesFrom">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#createdBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#createdBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#creates"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#creates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#creates">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Human"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Document"/>
+        <rdfs:comment xml:lang="en">To bring (something) into existence.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#describedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#describedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">An Entity is described by a Proposition.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#detectedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#detectedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#detects"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#detects -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#detects">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#DetectionAction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Failure"/>
+        <rdfs:comment xml:lang="en">To discover or identify the presence or existence of.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#documentedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#documentedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#documents"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#documents -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#documents">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Document"/>
+        <rdfs:range rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+        <rdfs:comment xml:lang="en">To record (something) in written, photographic, or other form.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#executedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#executedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#executes"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#executes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#executes">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/cora-bare#Robot"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#ComputerProgram"/>
+        <rdfs:comment xml:lang="en">To put into effect.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#experiencedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#experiencedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#experiences"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#experiences -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#experiences">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/corax#DesignObject"/>
+                    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Artifact"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Failure"/>
+        <rdfs:comment xml:lang="en">A Process occurs in which an Artifact or Design Object is a participant.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasAbstractPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasAbstractPart">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasDeadline -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasDeadline">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasTimePoint"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isDeadlineOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Deadline"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasDetectionEntity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasDetectionEntity">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isDetectionOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Failure"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Detection"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasEndingDate -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasEndingDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasTimePoint"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isEndingDateOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#EndingDate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasFunction">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isFunctionOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/corax#DesignObject"/>
+                    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Device"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasIDNumber -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasIDNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasName"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isIDNumberOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#IDNumber"/>
+        <rdfs:comment xml:lang="en">The name of an Entity is purely numeric.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasLatestRevisionDate -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasLatestRevisionDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasTimePoint"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isLatestRevisionDateOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Document"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#LatestRevisionDate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasMember">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasPart"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasName -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasName">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isNameOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Name"/>
+        <rdfs:comment xml:lang="en">An Entity is identified by a Name that may be alphanumeric, numeric, or alphabetic.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasOccurrenceEntity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasOccurrenceEntity">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isOccurrenceOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Failure"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Occurrence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasPart">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasRPNEntity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasRPNEntity">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isRPNOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Failure"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#RiskPriorityNumber"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasRobotActuatingPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasRobotActuatingPart">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasRobotPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasRobotCommunicatingPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasRobotCommunicatingPart">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasRobotPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasRobotPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasRobotPart">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasRobotProcessingPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasRobotProcessingPart">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasRobotPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasRobotSensingPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasRobotSensingPart">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasRobotPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasSeverityEntity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasSeverityEntity">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isSeverityOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Failure"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Severity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasStartingDate -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasStartingDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasTimePoint"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isStartingDateOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#StartingDate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasTimeInterval -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasTimeInterval">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#time"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isTimeIntervalOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Physical"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#TimeInterval"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasTimePoint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasTimePoint -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasTimePoint">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#time"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isTimePointOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Document"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#TimePoint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#idealizedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#idealizedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#investigatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#investigatedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#investigates"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#investigates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#investigates">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#DFMEA"/>
+        <rdfs:range rdf:resource="http://purl.org/ieee1872-owl/corax#Design"/>
+        <rdfs:comment xml:lang="en">To carry out a systematic or formal inquiry to discover and examine something so as to establish the truth.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isDeadlineOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isDeadlineOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isTimePointOf"/>
+        <rdfs:comment xml:lang="en">To be the Deadline instance assigned to a Process.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isDetectionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isDetectionOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">To be the Detection instance assigned to a Failure.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isEndingDateOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isEndingDateOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isTimePointOf"/>
+        <rdfs:comment xml:lang="en">To be the EndingDate instance assigned to a Process.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isFunctionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isFunctionOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">To be the Function instance assigned to an Entity.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isIDNumberOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isIDNumberOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isNameOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">To be the IDNumber instance assigned to an Entity.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isLatestRevisionDateOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isLatestRevisionDateOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isTimePointOf"/>
+        <rdfs:comment xml:lang="en">To be the latestRevisionDate instance assigned to a Document.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isNameOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isNameOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">To be the Name instance assigned to an Entity.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isOccurrenceOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isOccurrenceOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Occurrence"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Failure"/>
+        <rdfs:comment xml:lang="en">To be the Occurrence instance assigned to a Failure.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isRPNOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isRPNOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">To be the RiskPriorityNumber instance assigned to a Failure.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isSeverityOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isSeverityOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">To be the Severity instance assigned to a Failure.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isStartingDateOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isStartingDateOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isTimePointOf"/>
+        <rdfs:comment xml:lang="en">To be the StartingDate instance assigned to a Process.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isTimeIntervalOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isTimeIntervalOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isTimePointOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#isTimePointOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">To be the TimePoint instance assigned to a Physical.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#performedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#performedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#performs"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#performs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#performs">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Human"/>
+        <rdfs:range rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+        <rdfs:comment xml:lang="en">To carry out, accomplish, or fulfil (an action, task, or function).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#predictedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#predictedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#predicts"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#predicts -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#predicts">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#DFMEAWorksheet"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Failure"/>
+        <rdfs:comment xml:lang="en">To say or estimate that (a specified thing) will happen in the future or will be a consequence of something.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#preventedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#preventedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#prevents"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+        <rdfs:range rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#prevents -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#prevents">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">A very general Predicate. (prevents ?PROC1 ?PROC2) means that an instance of ?PROC1 prevents the occurrence of ?PROC2.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#relatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#relatedTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#IssueReport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#IssueReport"/>
+        <rdfs:comment xml:lang="en">To make or show a connection between.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#reportedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#reportedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#reports"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#reports -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#reports">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Human"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Failure"/>
+        <rdfs:comment xml:lang="en">To give a spoken or written account of something that one has observed, heard, done, or investigated.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#reproducedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#reproducedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#reproduces"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">A copy is produced by.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#reproduces -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#reproduces">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#ReproductionProcedure"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Failure"/>
+        <rdfs:comment xml:lang="en">To produce a copy of.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#solvedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#solvedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#solves"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#solves -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#solves">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Solution"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Failure"/>
+        <rdfs:comment xml:lang="en">To find an answer to, explanation for, or means of effectively dealing with.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#specifiedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#specifiedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#specifies"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">Identified clearly and definitely by.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#specifies -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#specifies">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Document"/>
+        <rdfs:range rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Entity"/>
+        <rdfs:comment xml:lang="en">To identify clearly and definitely.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#subprocessOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#subprocessOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#superprocessOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+        <rdfs:range rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+        <rdfs:comment xml:lang="en">The Process counterpart of Part. A Process can be composed of other Processes (subprocesses).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#superprocessOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#superprocessOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#testedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#testedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#tests"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#tests -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#tests">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Testing"/>
+        <rdfs:range rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Artifact"/>
+        <rdfs:comment xml:lang="en">To take measures to check the quality, performance, or reliability of (something).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#validatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#validatedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#validates"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">To have the validity or accuracy proven by.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#validates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#validates">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#ValidationProcedure"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Solution"/>
+        <rdfs:comment xml:lang="en">To check or prove the validity or accuracy of.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#ActionTaken -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#ActionTaken">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#IntentionalProcess"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">A Preventative/Mitigation action or Detection Action that has been applied to the design.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Day -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Day">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#TimePoint"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">A number of days.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Description">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The detailing of an entity.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#External -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#External">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Internal"/>
+        <rdfs:comment xml:lang="en">Coming or derived from a source outside the subject affected.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Hardware -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Hardware">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/corax#DesignObject"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#IssueReport"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">The physical and electronic parts of a computer or electronic system.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Internal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Internal">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Coming or derived from a source inside the subject affected.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Month -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Month">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#TimePoint"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">A number of months.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Permanent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Permanent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Solution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Temporary"/>
+        <rdfs:comment xml:lang="en">Lasting or intended to last or remain unchanged indefinitely.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#RecommendedAction -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#RecommendedAction">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#IntentionalProcess"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">A Preventative/Mitigation Action or Detection Action that is suggested for the design.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#RevisionNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#RevisionNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#DFMEAWorksheet"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">The ID Number representing the current revision of a document.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Software -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Software">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/corax#DesignObject"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#IssueReport"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">The programs and other operating information used by a computer.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#SoftwareVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#SoftwareVersion">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#ComputerProgram"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</xsd:minInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Software Version is a Version Attribute to the Proposition, Computer Program.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Temporary -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Temporary">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Solution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Lasting for only a limited time interval.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Year -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Year">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#TimePoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">A number of years.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasDetection -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasDetection">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Detection"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Has a detection value.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasOccurrence -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasOccurrence">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Occurrence"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Has an occurrence value.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasRPN -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasRPN">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#RiskPriorityNumber"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Has a risk priority number value.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasSeverity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasSeverity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Has a severity value.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/cora-bare#Robot -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#Robot">
+        <rdfs:comment xml:lang="en">A device that is an agent that acts in a physical environment.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/corax#Design -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/corax#Design">
+        <rdfs:comment xml:lang="en">A design idealizes the intended structure of one or more artifacts.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/corax#DesignObject -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/corax#DesignObject">
+        <rdfs:comment xml:lang="en">Design objects are abstract idealizations of the individual artifacts conforming to the design.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/corax#PhysicalEnvironment -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/corax#PhysicalEnvironment">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A Physical Environment is an object that has at least one specific part: a region in which it is located. In addition, a physical environment relates to at least one reference object based on which its region is defined.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#Artifact -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Artifact">
+        <rdfs:comment xml:lang="en">An object that is the product of a making.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#Attribute -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Attribute">
+        <rdfs:comment xml:lang="en">Qualities that we cannot or choose not to reify into subclasses of object.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#CognitiveAgent -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#CognitiveAgent">
+        <rdfs:comment xml:lang="en">A Cognitive Agent is an Autonomous Agent that has the ability to reason, deliberate, make plans, and experience emotions.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#CorpuscularObject -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#CorpuscularObject">
+        <rdfs:comment xml:lang="en">A SelfConnectedObject whose parts have properties that are not shared by the whole.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#Device -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Device">
+        <rdfs:comment xml:lang="en">A device is an artifact whose purpose is to serve as an instrument in a specific subclass of a process.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#Entity -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Entity">
+        <rdfs:comment xml:lang="en">The universal class of individuals. This is the root node of the ontology.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#IntentionalProcess -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#IntentionalProcess">
+        <rdfs:comment xml:lang="en">A Process that has a specific purpose for the Autonomous Agent who performs it.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#Object -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Object">
+        <rdfs:comment xml:lang="en">Corresponds roughly to the class of ordinary objects. Examples include normal physical objects, geographical regions, locations of processes, and the complement of objects in the physical class.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#Physical -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Physical">
+        <rdfs:comment xml:lang="en">Entities that have spatio-temporal extension.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#Process -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Process">
+        <rdfs:comment>The class of things that happen and have temporal parts or stages. The formal definition is: anything that occurs in time but is not an object.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#Proposition -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Proposition">
+        <rdfs:comment xml:lang="en">Propositions are abstract entities that express a complete thought or a set of such thoughts.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#TimePosition -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#TimePosition">
+        <rdfs:comment xml:lang="en">Any Time Point or Time Interval along the universal timeline.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#ComputerProgram -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#ComputerProgram">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Procedure"/>
+        <rdfs:comment xml:lang="en">A set of instructions in a computer programming language that can be executed by a computer.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Configuration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Configuration">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Attribute"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#RiskPriorityNumber"/>
+        <rdfs:comment xml:lang="en">An arrangement of parts or elements in a particular form, figure, or combination.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#ContentBearingObject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#ContentBearingObject">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#CorpuscularObject"/>
+        <rdfs:comment xml:lang="en">Any SelfConnectedObject that expresses content.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#CurrentTime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#CurrentTime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#TimePoint"/>
+        <rdfs:comment>The time point presently occurring.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#DFMEA -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#DFMEA">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Investigating"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Experimenting"/>
+        <rdfs:comment xml:lang="en">The process of reviewing as many components, assemblies, and subsystems as possible to identify potential failure modes in a system and their causes and effects.
+https://en.wikipedia.org/wiki/Failure_mode_and_effects_analysis</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#DFMEAWorksheet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#DFMEAWorksheet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Document"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#IssueReport"/>
+        <rdfs:comment xml:lang="en">Document containing the results of a DFMEA, generally in a standardized tabular format.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Deadline -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Deadline">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#TimePoint"/>
+        <rdfs:comment xml:lang="en">Time point by which a process must end.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Detection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Detection">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Attribute"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#RiskPriorityNumber"/>
+        <rdfs:comment xml:lang="en">How well controls will detect a failure cause or mode.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#DetectionAction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#DetectionAction">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#IntentionalProcess"/>
+        <rdfs:comment xml:lang="en">The action used to detect a failure cause or mode.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Document -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Document">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#ContentBearingObject"/>
+        <rdfs:comment xml:lang="en">Any Content Bearing Object that is an Artifact conventionally typically intended to be transmitted and assimilated as a meaningful whole.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#EndingDate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#EndingDate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#TimePoint"/>
+        <rdfs:comment xml:lang="en">Time point at which a process ends.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Experimenting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Experimenting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Investigating"/>
+        <rdfs:comment xml:lang="en">Investigating the truth of a Proposition by constructing and observing a trial. Note that the trial may be either controlled or uncontrolled, blind or not blind.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Failure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Failure">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+        <rdfs:comment xml:lang="en">A process of becoming unable to perform a normal function.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#FailureCause -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#FailureCause">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+        <rdfs:comment xml:lang="en">A process that initiates a failure.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#FailureEffect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#FailureEffect">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+        <rdfs:comment xml:lang="en">The process resulting from a failure.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#FailureMode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#FailureMode">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+        <rdfs:comment xml:lang="en">The manner in which something might fail.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Function -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Function">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+        <rdfs:comment xml:lang="en">The process that an Entity is designed to perform.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Human -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Human">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#CognitiveAgent"/>
+        <rdfs:comment xml:lang="en">Modern man, the only remaining species of the Homo genus.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#IDNumber -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#IDNumber">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Name"/>
+        <rdfs:comment xml:lang="en">A numeric code serving as the name for an object.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Investigating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Investigating">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#IntentionalProcess"/>
+        <rdfs:comment xml:lang="en">The class of Intentional Psychological Processes where the Agent attempts to obtain information (i.e. a Proposition denoted by a Formula).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#IssueReport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#IssueReport">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Document"/>
+        <rdfs:comment xml:lang="en">A document that contains the results of a test or experiment that resulted in a failure.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#LatestRevisionDate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#LatestRevisionDate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#TimePoint"/>
+        <rdfs:comment xml:lang="en">Time point at which at which the most current revision of a document was completed.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Name -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Name">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Proposition"/>
+        <rdfs:comment xml:lang="en">A Proposition that identifies an entity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Occurrence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Occurrence">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Attribute"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#RiskPriorityNumber"/>
+        <rdfs:comment xml:lang="en">The probability that a failure cause will occur.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#PreventativeOrMitigationAction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#PreventativeOrMitigationAction">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#IntentionalProcess"/>
+        <rdfs:comment xml:lang="en">Actions use to prevent a failure or reduce its severity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Procedure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Procedure">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Proposition"/>
+        <rdfs:comment xml:lang="en">A sequence-dependent specification.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Region -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Region">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Object"/>
+        <rdfs:comment xml:lang="en">A topographic location.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#ReproductionProcedure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#ReproductionProcedure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Procedure"/>
+        <rdfs:comment xml:lang="en">Produces a copy.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#RiskPriorityNumber -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#RiskPriorityNumber">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Attribute"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Severity"/>
+        <rdfs:comment xml:lang="en">A numerical assessment of risk.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Severity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Severity">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Attribute"/>
+        <rdfs:comment xml:lang="en">The seriousness of an effect.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Solution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Solution">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Procedure"/>
+        <rdfs:comment xml:lang="en">A means of solving a failure that has already occurred.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#StartingDate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#StartingDate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#TimePoint"/>
+        <rdfs:comment xml:lang="en">Time point at which a process begins.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Testing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Testing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Experimenting"/>
+        <rdfs:comment xml:lang="en">The process of taking measures to check the quality, performance, or reliability of (something), especially before putting it into widespread use or practice.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#TimeInterval -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#TimeInterval">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#TimePosition"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#TimePoint"/>
+        <rdfs:comment xml:lang="en">An interval of time. Note that a TimeInterval has both an extent and a location on the universal timeline. Note too that a TimeInterval has no gaps, i.e. this class contains only convex time intervals.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#TimePoint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#TimePoint">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#TimePosition"/>
+        <rdfs:comment xml:lang="en">An extensionless point on the universal timeline.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#ValidationProcedure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#ValidationProcedure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Procedure"/>
+        <rdfs:comment xml:lang="en">The action of checking or proving the validity or accuracy of something.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#CollectiveRoboticSystem">
+        <rdfs:comment xml:lang="en">A Collective Robotic System has two or more robots.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#RobotGroup">
+        <rdfs:comment>A Robot Group is a group whose only members are robots.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#RobotInterface">
+        <rdfs:comment xml:lang="en">The Robot Interface is a device composed by other devices that play the roles of sensing device, actuating device and communicating device.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#RoboticEnvironment">
+        <rdfs:comment xml:lang="en">A Physical Environment equipped with Robotics Systems.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#RoboticSystem">
+        <rdfs:comment xml:lang="en">A Robotic System is an artificial system formed by robots and devices intended to support the robots to carry on their tasks.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#SingleRoboticSystem">
+        <rdfs:comment xml:lang="en">A Single Robotic System has one and only one robot.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/corax#ArtificialSystem">
+        <rdfs:comment xml:lang="en">An artificial system is an Artifact formed by various devices (and other objects) that interact in order to execute a function.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/corax#HumanRobotCommunication">
+        <rdfs:comment xml:lang="en">An occurrence of Human Robot Communication is any process that involves the transfer of information between humans and robots.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/corax#Interaction">
+        <rdfs:comment xml:lang="en">A process in which two agents participate. It is composed by two subprocesses defining action and reaction.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/corax#ProcessingDevice">
+        <rdfs:comment xml:lang="en">A Processing Device is an Electric Device whose purpose is to serve as an instrument in a subclass of computer process.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/corax#RobotMotion">
+        <rdfs:comment>An occurrence of Robot Motion is any process of movement where the agent is a robot and the patient is one of its (robot) parts.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/corax#RobotRobotCommunication">
+        <rdfs:comment xml:lang="en">An occurrence of Robot Robot Communication is any process that involves the information transfer between two or more robots.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/corax#designAttribute">
+        <rdfs:comment xml:lang="en">The relation between an abstract object and an attribute serving as the abstract counterpart to Attribute.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/pos#OrientationCoordinateSystem">
+        <rdfs:comment xml:lang="en">An abstract entity defined in relation to a single reference object.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/pos#PositionCoordinateSystem">
+        <rdfs:comment xml:lang="en">An abstract entity used for specifying location in relation to a reference object.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Abstract">
+        <rdfs:comment xml:lang="en">Entities that do not have or are chosen not to have spatio-temporal extension.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Agent">
+        <rdfs:comment xml:lang="en">Something or someone that can act on its own and produce changes in the world.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Collection">
+        <rdfs:comment xml:lang="en">Collections have members like classes, but, unlike classes, they have a position in space-time and members can be added and subtracted without thereby changing the identity of the collection.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#ConstantQuantity">
+        <rdfs:comment xml:lang="en">A Physical Quantity with a constant value.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Creation">
+        <rdfs:comment xml:lang="en">The subclass of Process in which something is created.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#ElectricDevice">
+        <rdfs:comment xml:lang="en">A Device that uses electricity as its primary power source.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Group">
+        <rdfs:comment xml:lang="en">A collection of agents.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#InternalChange">
+        <rdfs:comment xml:lang="en">Processes which involve altering an internal property of an Object, e.g. the shape of the Object, its coloring, its structure, etc. Processes that are not instances of this class include changes that only affect the relationship to other objects, e.g. changes in spatial or temporal location.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Making">
+        <rdfs:comment xml:lang="en">The subclass of Creation in which an individual Artifact or a type of Artifact is made.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Motion">
+        <rdfs:comment>Any Process of movement.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#PhysicalQuantity">
+        <rdfs:comment xml:lang="en">A Physical Quantity is a measure of some quantifiable aspect of the modeled world.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Predicate">
+        <rdfs:comment xml:lang="en">A sentence-forming Relation.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Quantity">
+        <rdfs:comment xml:lang="en">Any specification of how many or how much of something there is. Accordingly, there are two subclasses of quantity: number (how many) and physical quantity (how much).</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Relation">
+        <rdfs:comment xml:lang="en">The class of relations. There are three kinds of relation: predicate, function, and list. Predicates and functions both denote sets of ordered n-tuples. The difference between these two classes is that predicates cover formula-forming operators, while functions cover term-forming operators. A list, on the other hand, is a particular ordered n-tuple.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#SelfConnectedObject">
+        <rdfs:comment xml:lang="en">A Self Connected Object is any Object that does not consist of two or more disconnected parts.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#SentientAgent">
+        <rdfs:comment xml:lang="en">A Sentient Agent is an Autonomous Agent that is capable of Perception and experiences some level of consciousness.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#SetOrClass">
+        <rdfs:comment xml:lang="en">The set or class of sets and classes; i.e., any instance of abstract that has elements or instances.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#TimeMeasure">
+        <rdfs:comment xml:lang="en">The class of temporal durations and positions of time points and time intervals along the universal timeline.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#property">
+        <rdfs:comment xml:lang="en">An Entity has an Attribute.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Configuration"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Detection"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Occurrence"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Severity"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FE">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#D">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#DO">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#F">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#N">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FC">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FM">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FEd">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FMd">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FCd">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#IR">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#S">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#Sval">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#O">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#Oval">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#RPNval">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#Dval">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#RPN">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Returns Issue Reports and their associated Failures</rdfs:comment>
+        <rdfs:label>Issue Reports</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasName"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#IR"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#N"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Name"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#N"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#IssueReport"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#IR"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#documents"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#IR"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#F"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Failure"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#F"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select"/>
+                        <swrl:arguments rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#IR"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#N"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#F"/>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Calculates the RPN of the failure by multiplying the Sverity, Occurrence, and Detection values of the Severity, Occurrence, and Detection entities associated with the Failure.</rdfs:comment>
+        <rdfs:label>RPN Calculation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasSeverity"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#S"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#Sval"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasOccurrence"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#O"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#Oval"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply"/>
+                                        <swrl:arguments rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#RPNval"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#Sval"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#Oval"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#Dval"/>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasSeverityEntity"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#F"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#S"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasOccurrenceEntity"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#F"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#O"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasDetectionEntity"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#F"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#D"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Failure"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#F"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasRPNEntity"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#F"/>
+                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#RPN"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasDetection"/>
+                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#D"/>
+                                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#Dval"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasRPN"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#RPN"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#RPNval"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Tests the calculation of the Risk Priority Number</rdfs:comment>
+        <rdfs:label>Test RPN Calculation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasSeverity"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#S"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#Sval"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasOccurrence"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#O"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#Oval"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply"/>
+                                        <swrl:arguments rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#RPNval"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#Sval"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#Oval"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#Dval"/>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasSeverityEntity"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#F"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#S"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasOccurrenceEntity"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#F"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#O"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasDetectionEntity"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#F"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#D"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Failure"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#F"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasRPNEntity"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#F"/>
+                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#RPN"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasDetection"/>
+                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#D"/>
+                                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#Dval"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select"/>
+                        <swrl:arguments rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#Sval"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#Oval"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#Dval"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#RPNval"/>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Lists all failure causes</rdfs:comment>
+        <rdfs:label>Failure Causes</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#FailureCause"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FC"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select"/>
+                        <swrl:arguments rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FC"/>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Lists all failure effects</rdfs:comment>
+        <rdfs:label>Failure Effects</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#FailureEffect"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FE"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select"/>
+                        <swrl:arguments rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FE"/>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Displays all failure modes</rdfs:comment>
+        <rdfs:label>Failure Modes</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#FailureMode"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FM"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select"/>
+                        <swrl:arguments rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FM"/>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>If a Solution is Temporary, it is not Permanent.</rdfs:comment>
+        <rdfs:label>Inverse Permanent</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Permanent"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#S"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Solution"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#S"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Temporary"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#S"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>If a Solution is Temporary, it is not Permanent.</rdfs:comment>
+        <rdfs:label>Inverse Temporary</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Solution"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#S"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Temporary"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#S"/>
+                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Permanent"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#S"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Search failure causes</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#FailureEffect"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FE"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Description"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FE"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#D"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#contains"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#D"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>ghost</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://purl.org/ieee1872-owl/corax#DesignObject"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#DO"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#experiences"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#DO"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#F"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Name"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#N"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#hasName"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#DO"/>
+                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#N"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select"/>
+                        <swrl:arguments rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#N"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#D"/>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Adds &quot;causes&quot; object properties between failure causes, modes, and effects</rdfs:comment>
+        <rdfs:label>Causality between failure causes, modes, and effects</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#subprocessOf"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FC"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#F"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#subprocessOf"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FE"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#F"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#FailureMode"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FM"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#FailureCause"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FC"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Failure"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#F"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#subprocessOf"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FM"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#F"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#FailureEffect"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FE"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#causes"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FC"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FM"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#causes"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FM"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FE"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Returns complete failures and their associated causes, modes, and effects.</rdfs:comment>
+        <rdfs:label>Complete Failures</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#subprocessOf"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FC"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#F"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#subprocessOf"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FE"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#F"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#FailureMode"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FM"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Description"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FE"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FEd"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Description"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FM"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FMd"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#FailureCause"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FC"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Failure"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#F"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#Description"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FC"/>
+                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FCd"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#subprocessOf"/>
+                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FM"/>
+                                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#F"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                        <rdf:first>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology_Excel_Imported#FailureEffect"/>
+                                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FE"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:first>
+                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select"/>
+                        <swrl:arguments rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#F"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FCd"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FMd"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sam/ontologies/2022/10/FMEA_Ontology#FEd"/>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
